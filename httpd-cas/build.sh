@@ -29,7 +29,7 @@ fi
 
 docker image rm citymega/httpd:cas
 docker build --build-arg IMAGE_VERSION=${HTTPD_FULL_VERSION} --build-arg \
- BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t citymega/httpd:cas -f "${SCRIPTDIR}/Dockerfile" "${SCRIPTDIR}/.."
+ BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t citymega/httpd:cas -f "${SCRIPTDIR}/Dockerfile" "${SCRIPTDIR}"
 
 retVal=$?
 if [ $retVal -ne 0 ]; then
